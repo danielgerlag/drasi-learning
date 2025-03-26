@@ -1,0 +1,1 @@
+kubectl -n drasi-system port-forward svc/signalr-gateway 8080:8080
