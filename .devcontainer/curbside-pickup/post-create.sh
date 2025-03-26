@@ -23,13 +23,13 @@ while ( ! kubectl cluster-info ); do
 done
 
 echo "Setting up PostgreSQL for Retail Ops data storage..."
-kubectl apply -f /workspaces/learning/apps/curbside-pickup/retail-ops/postgres-database.yaml
+kubectl apply -f .retail-ops/postgres-database.yaml
 
 echo "Waiting for PostgreSQL to become ready..."
 kubectl wait --for=condition=ready pod -l app=postgres --timeout=300s
 
 echo "Setting up MySQL for Physical Ops data storage..."
-kubectl apply -f /workspaces/learning/apps/curbside-pickup/physical-ops/mysql-database.yaml
+kubectl apply -f ./physical-ops/mysql-database.yaml
 
 echo "Waiting for MySQL to become ready..."
 kubectl wait --for=condition=ready pod -l app=mysql --timeout=300s
