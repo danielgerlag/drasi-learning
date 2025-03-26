@@ -16,7 +16,8 @@
 				"ms-python.python", 
 				"ms-python.vscode-pylance",
 				"ms-azuretools.vscode-docker",
-				"DrasiProject.drasi"
+				"DrasiProject.drasi",
+				"cweijan.vscode-database-client2"
 			]
 		}
 	},
